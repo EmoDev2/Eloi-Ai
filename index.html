@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat con IA - Groq</title>
+  <!-- Prism CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+<!-- Prism JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+<!-- Puedes agregar más lenguajes como prism-python.min.js etc -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Info IA -->
+  <div class="info-ia">
+    <pre id="desc-texto"></pre>
+    <label for="name">Name</label>
+    <input id="name" type="text" class="names" placeholder="Name here">
+    
+    <div class="model-selector">
+      
+      <label for="modelo">Modelo:</label>
+      <select id="modelo">
+        <option value="llama3-70b-8192" selected>LLaMA 3 - 70B</option>
+        <option value="mixtral-8x7b">Mixtral 8x7B</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Chat -->
+  <div class="chat-container">
+    <div id="chat" class="chat-box"></div>
+    <div class="chat-input">
+      <textarea id="input" rows="2" placeholder="Escribe tu mensaje..."></textarea>
+      <button onclick="enviarMensaje()"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="40px" height="40px" viewBox="0 0 495.003 495.003">
+  <g>
+    <path d="M164.711,456.687c0,2.966,1.647,5.686,4.266,7.072c2.617,1.385,5.799,1.207,8.245-0.468l55.09-37.616l-67.6-32.22V456.687z"/>
+    <path d="M492.431,32.443c-1.513-1.395-3.466-2.125-5.44-2.125c-1.19,0-2.377,0.264-3.5,0.816L7.905,264.422c-4.861,2.389-7.937,7.353-7.904,12.783c0.033,5.423,3.161,10.353,8.057,12.689l125.342,59.724l250.62-205.99L164.455,364.414l156.145,74.4c1.918,0.919,4.012,1.376,6.084,1.376c1.768,0,3.519-0.322,5.186-0.977c3.637-1.438,6.527-4.318,7.97-7.956L494.436,41.257C495.66,38.188,494.862,34.679,492.431,32.443z"/>
+  </g>
+</svg>
+</button>
+    </div>
+  </div>
+  
+  <br>
+<script src="chat.js"></script>
+</body>
+</html>

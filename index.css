@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.info-ia {
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.model-selector label {
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.model-selector select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #2c3e50;
+  color: #fff;
+  font-size: 0.95em;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-box p {
+  
+  margin: 0;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  max-width: 80%;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.chat-box p strong {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.chat-box p:nth-child(even) {
+  align-self: flex-end;
+  background-color: #2b2bff;
+  color: #fff;
+}
+
+.chat-input {
+  position: relative;
+  display: flex;
+  padding: 16px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid #333;
+}
+
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2c3e50;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+}
+
+.chat-input textarea::placeholder {
+  color: #ccc;
+}
+
+.chat-input textarea:focus {
+  outline: 2px solid #4caf50;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #43a047;
+}
+
+.code-box {
+  background: #1e1e1e;
+  color: #eee;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin: 12px 0;
+  position: relative;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+
+.copy-btn {
+  position: sticky; /* o position: -webkit-sticky; para navegador Safari */
+  top: 8px;
+  right: 8px;
+  background: #3a3a3a;
+  border: none;
+  color: #fff;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: background 0.2s ease-in-out;
+}
+
+
+.copy-btn:hover {
+  background: #555;
+}
+.ia-message {
+  background-color: #354a61;
+  color: #f0f0f0;
+border-radius: 0 12px 12px 12px;
+
+  padding: 12px 16px;
+  margin: 10px 0;
+  max-width: 80%;
+  align-self: flex-start;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.user-message {
+  border-radius: 12px 0 12px 12px;
+
+  background-color: #726745;
+  color: white;
+  align-self: flex-end;
+  
+  padding: 12px 16px;
+  margin: 10px 0;
+  max-width: 80%;
+}
+.names {
+    background: #2c3e50;
+  color: #fff;
+  
+  padding: 7px;
+  border: 0;
+  border-radius: 5px;
+}
+.names:focus {
+    background: #2c3e50;
+    text-decoration: none;
+}
